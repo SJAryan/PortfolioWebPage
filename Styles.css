@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+    
+    /* cursor: url(Images/cursor.png), auto; */
+    /* overflow: hidden; */
+  }
+  /* navigation bar */
+  .navbar {
+    background-color: rgb(7, 29, 47);
+    
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    /* margin: 0 auto; */
+    /* padding: 0 50px; */
+  }
+  
+  .navbar__container a{
+    font-family: Tiny5;
+    font-size:medium;
+    background-color:rgb(34,139,34);
+  }
+
+  #navbar__logo {
+    background-color:rgb(34,139,34);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    font: italic bold;
+  }
+  
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  
+  .navbar__item {
+    height: 80px;
+    transition: all 0.3s ease;
+    
+  }
+
+  .navbar__links {
+    text-decoration: none;
+    width: 125px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .8s ease;
+    padding: 16px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: xx-large;
+  }
+  .navbar__item :hover {
+    color: #2c5364;
+  } 
+
+  /* welcome section */
+
+  .welcome {
+    background: #0f0c29;   
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    padding: 100px; 
+    background: url(Images/long-exposure-7169151_1280.jpg)fixed center ;
+    /* background-repeat: no-repeat;
+    background-position:center; */
+    
+  }
+  .welcome__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+ }
+ .wel__heading {
+   font-size: 100px;
+   margin-bottom: 24px;
+   width: 100%;
+   height: 100%;
+   background: #667db6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: Playwrite Es;
+  font-style: italic;
+   background-size: 100%;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+   cursor:default;
+
+ }
+ 
+ .wel__description {
+   font-size: 50px;
+   font-family: Bebas Neue;
+   cursor:default;
+   background: #D3CCE3;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to top, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+
+    position: absolute;
+  bottom: 200px;
+  left: 425px;
+
+ }
+
+
+ /* introduction section */
+
+ .about{
+  color:  rgb(34,139,34);
+ }
+ .introduction {
+    background-color:  #31572cff;
+    padding: 50px 50px;
+    background-color: rgb(7, 29, 47);
+  }
+  .introduction__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .introduction__text {
+    background-color: rgb(227, 249, 194);
+    border-radius: 10px;
+    padding: 20px;
+    color:black;
+    opacity: 0.1;
+    transition: 1s;
+  }
+
+  .introduction__image img{
+    border-radius: 10px;
+  }
+
+  .introduction__text:hover  {
+    
+    color:black;
+    opacity: 1;
+
+  }
+
+  /* EC's section */
+  .main__container{
+    background-color: rgb(7, 29, 47);
+    color:#fff;
+    text-align: center;
+    
+  }
+
+  .school__clubs{
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+  }
+  .school__clubs img{
+    margin: 25px;
+    transition: .8s;
+    border-radius: 100px;
+  }
+  .volunteering{
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  #friscologo, #scilogo, #codelogo, #betterlogo, #complogo{
+    margin: 25px;
+    transition: .8s;
+    border-radius: 100px;
+  }
+  .button2{
+    position: relative;
+    transition: .8s;
+  }
+  #nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
+    display: none;
+    font-size: large;
+    text-align: center;
+  }
+  #x-button, #x-buttonvol, #x-buttoncs {
+    display: flex;
+    position: relative;
+    left: 30px;
+    top: 100px;
+    transition: 2s;
+    padding: 20px;
+  }
+
+
+
+  
+  
+
+
+ 
+
+  
+  

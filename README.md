@@ -1,0 +1,1 @@
+The code is for a website I am coding using HTML, CSS, and Javascript. While it's still under development, this website will, in the end, show my achievements and showcase my ability in web development and design. I began working on this project on June 7th, 2024.  
