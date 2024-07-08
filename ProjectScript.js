@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // projects pages
     
 const projects = [
-    { src: 'Images/Callogo.jpeg', description: "ekfgledf" },
-    { src: 'Images/lifelogo.jpeg', description: "rfdjgjdjdjh" },
-    { src: 'Images/tetrislogo.jpeg', description: "hsdgdsgh" },
-    { src: 'Images/soonlogo.jpeg', description: "hkdgfkhdf" }
+    { src: 'Images/Callogo.jpeg', description: "A calculator that does basic arithmetic operations. Developed using Java and stdDraw" },
+    { src: 'Images/lifelogo.jpeg', description: "Developed John Horton Conway’s Game of Life in Java as part of my Computer Science 3 project." },
+    { src: 'Images/tetrislogo.jpeg', description: "The tetirs game made using STD Draw Java library." },
+    { src: 'Images/soonlogo.jpeg', description: "I am working on more projects right now and more projects will be posted in the future" }
 ];
 
 const back = document.getElementById("back");
@@ -32,8 +32,9 @@ function goFront() {
 
 function findCurrproject() {
     console.log("here2");
+    let imgSrc = img.src.split('/').pop();  // Extract the filename
     for (let i = 0; i < projects.length; i++) {
-        if (projects[i].src === img.src) {
+        if (projects[i].src.includes(imgSrc)) {
             return i;
         }
     }
@@ -41,9 +42,11 @@ function findCurrproject() {
 }
 
 function updateContent(index) {
-    console.log(projects[index].src)
     img.src = projects[index].src;
     description.innerHTML = projects[index].description;
 }
+
+// Initialize the first project's content
+updateContent(0);  // This will set the initial image and description to the third project (tetrislogo)
 
 });

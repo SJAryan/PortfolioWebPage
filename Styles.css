@@ -171,7 +171,20 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
     padding: 20px;
     color:black;
     opacity: 0.1;
-    transition: 1s;
+    transition: 2s;
+    font-family: Merienda;
+    font: bold italic;
+    line-height: 40px;
+  }
+  .introduction__text p{
+    padding: 20px;
+    color:black;
+    transition: 2.8s;
+    font-family: Merienda;
+    font: bold italic;
+    font-size: 10px;
+    line-height: 40px;
+    
   }
 
   .introduction__image img{
@@ -179,10 +192,13 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
   }
 
   .introduction__text:hover  {
-    
     color:black;
     opacity: 1;
-
+  }
+  .introduction__text p:hover  {
+    color:black;
+    opacity: 1; 
+    font-size: 15px;
   }
 
   /* EC's section */
@@ -229,6 +245,11 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
     display: none;
     font-size: large;
     text-align: center;
+    justify-content: center;
+  }
+
+  #compdescription{
+    color: white;
   }
   #x-button, #x-buttonvol, #x-buttoncs {
     display: flex;
@@ -252,11 +273,12 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
     overflow-x: hidden;
 }
 
-#projectimage img {
+#projectimage  {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
-    
+    border-radius: 20px;
+    max-height: 350px;
 }
 
 #description {
