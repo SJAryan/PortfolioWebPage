@@ -47,6 +47,7 @@
     -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: end;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -89,6 +90,31 @@
   .navbar__item :hover {
     color: #2c5364;
   } 
+  #menuicon{
+    display: none;
+  }
+  .navbar__menumobile {
+    display: flex;
+    background-color: black;
+    position: absolute;
+    top: -150px; 
+    right: 0;  
+    transition: .8s;
+    padding: 50px;
+    border-radius: 50px;
+    color: rgb(34,139,34);
+}
+.navbar__menumobile a{
+display: block; /* Ensure links are block elements */
+    text-decoration: none;
+    color: #228b22; /* Set link color */
+    padding: 15px;
+    width: 100%; /* Make links take full width */
+    text-align: center; /* Center text */
+    background-color: #E9E4F0; /* Match background */
+    font-size: 1rem; /* Increase font size */
+    transition:  0.3s ease; /* Smooth hover transition */
+}
 
   /* welcome section */
 
@@ -118,18 +144,18 @@
    width: 100%;
    height: 100%;
    background: #667db6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  font-family: Playwrite Es;
-  font-style: italic;
-   background-size: 100%;
+   background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   font-family: Playwrite Es;
+   font-style: italic;
+    background-size: 100%;
    -webkit-background-clip: text;
    -moz-background-clip: text;
    -webkit-text-fill-color: transparent;
    -moz-text-fill-color: transparent;
    cursor:default;
-
+   justify-content: center;
+   align-items: center;
  }
  
  .wel__description {
@@ -143,13 +169,37 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
    -moz-background-clip: text;
    -webkit-text-fill-color: transparent;
    -moz-text-fill-color: transparent;
-
-    position: absolute;
-  bottom: 200px;
-  left: 425px;
+   justify-content: center;
+   align-items: center;
 
  }
+ @media all and (max-width: 500px ) {
+  *{
+    overflow-x: hidden;
 
+  }
+  .wel__heading{
+    font-size: 200%;
+  }
+  .wel__description{
+    font-size: 150%;
+  }
+  #navbar__logo{
+    font-size: 100%;
+    padding-left: 10px;
+    
+  }
+  .navbar__links{
+    display: none;
+  }
+  #menuicon{
+    display: flex;
+    position: absolute;
+    left: 80%;
+    bottom: 20%;
+    padding-top: 5px;
+  }
+}
 
  /* introduction section */
 

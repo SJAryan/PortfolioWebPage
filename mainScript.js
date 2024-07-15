@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // EC's title and image animations and changes
     
+        
+    
         //school clubs
         const nhslogo = document.getElementById("nhslogo"); 
         const edslogo = document.getElementById("edslogo");
@@ -73,6 +75,27 @@ document.addEventListener("DOMContentLoaded", function() {
         xbtn3.addEventListener('mouseover', xbuttonchange);
         xbtn3.addEventListener('mouseleave', xbuttonreset);
         xbtn3.addEventListener('click', clickreset);
+       
+        //Nav bar
+    const menu = document.getElementById("menuicon");
+    const menuitems = document.getElementById("menuliksm");
+    
+    // Initialize the menu to be off-screen
+    menuitems.style.top = '-150%';
+
+    //click on menu 
+    menu.addEventListener('click', menuClick);
+
+    function menuClick() {
+        console.log(menuitems.style.top);
+        if (menuitems.style.top === '-150%') {
+            menuitems.style.top = '10%';
+        } else {
+            menuitems.style.top = '-150%';
+        }
+        console.log(menuitems.style.top);
+    }
+       
         // hover on logos
     
         //school clubs

@@ -12,7 +12,25 @@ const back = document.getElementById("back");
 const front = document.getElementById("forward");
 const img = document.getElementById("projectimage");
 const description = document.getElementById("description");
+ //Nav bar
+ const menu = document.getElementById("menuicon");
+ const menuitems = document.getElementById("menuliksm");
+ 
+ // Initialize the menu to be off-screen
+ menuitems.style.top = '-150%';
 
+ //click on menu 
+ menu.addEventListener('click', menuClick);
+
+ function menuClick() {
+     console.log(menuitems.style.top);
+     if (menuitems.style.top === '-150%') {
+         menuitems.style.top = '10%';
+     } else {
+         menuitems.style.top = '-150%';
+     }
+     console.log(menuitems.style.top);
+ }
 back.addEventListener('click', goBack);
 front.addEventListener('click', goFront);
 
