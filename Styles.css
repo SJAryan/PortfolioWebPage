@@ -334,62 +334,125 @@ display: block; /* Ensure links are block elements */
   left: 20%;
 }
 
-@media all and (max-width: 500px ) {
-  *{
+@media all and (max-width: 500px) {
+  * {
     overflow-x: hidden;
-
   }
-  .wel__heading{
+  
+  .wel__heading {
     font-size: 200%;
   }
-  .wel__description{
+
+  .wel__description {
     font-size: 150%;
   }
-  #navbar__logo{
+
+  #navbar__logo {
     font-size: 100%;
     padding-left: 10px;
-    
   }
-  .navbar__links{
+
+  .navbar__links {
     display: none;
   }
-  #menuicon{
+
+  #menuicon {
     display: flex;
     position: absolute;
     left: 80%;
     bottom: 20%;
     padding-top: 5px;
   }
+
   .introduction__container {
     display: flex;
-    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 200px;
+    padding-right: 200px;
   }
-  .introduction{
-    padding-bottom: 175%;
+
+  .introduction {
+    padding-bottom: 50%;
+    display: table-row;
   }
-  #imgme{
+
+  #imgme {
     width: 300px;
     height: 300px;
+    margin-bottom: 20px; /* Adds space between the image and the text */
   }
-  .introduction__text{
-    position:-ms-page;
-    padding: 0px;
+
+  .introduction__text {
+    position: static;
+    padding: 30px; /* Add padding for better appearance */
+    padding-bottom: 100px;
     opacity: 1;
-    top: 50%;
-    max-width: 300px;
-    
-    
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center the text */
   }
-  .introduction__text p{
-    font-size: 10px;
-    line-height: 10px;
+
+  .introduction__text p {
+    font-size: 14px;
+    line-height: 20px;
     opacity: 1;
     align-items: center;
     justify-content: center;
-    line-height: 20px;
   }
-  
+  .school__clubs{
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto; 
+  }
+  .volunteering{
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+  }
+  #friscologo, #scilogo, #codelogo, #betterlogo, #complogo, .school__clubs img{
+    width: 100px;
+    height: 100px;
+  }
+  .main__container{
+    padding-bottom: 500px;
+  }
+  #nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
+    font-size: small;
+  }
+  #projectimage{
+    width: 200px;
+    height: 200px;
+  }
+  .main__containerp{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  #description {
+    max-width: 1000px;
+  }
+  #back{
+    width: 90px;
+    height: 90px;
+    right: 50%;
+  }
+  #forward{
+    width: 90px;
+    height: 90px;
+    left: 65%;
+   
+  }
+
+
 }
+
 
 
 
