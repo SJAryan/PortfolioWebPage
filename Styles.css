@@ -4,14 +4,15 @@
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
-    /* background-color: rgb(7, 29, 47); */
-    /* cursor: url(Images/cursor.png), auto; */
-    /* overflow: hidden; */
+  }
+
+  /* Index  */
+  .mainIndexPage {
+    background-color: rgb(7, 29, 47);
   }
   /* navigation bar */
   .navbar {
-    background-color: rgb(7, 29, 47);
-    
+    background: none scroll;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -122,12 +123,13 @@ display: block; /* Ensure links are block elements */
     background: #0f0c29;   
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
     padding: 100px; 
-    background: url(Images/long-exposure-7169151_1280.jpg)fixed center ;
-    /* background-repeat: no-repeat;
-    background-position:center; */
+    background: url(Images/long-exposure-7169151_1280.jpg) fixed center ;
+    width: 100%;
+    height: 100%;
     
   }
-  .welcome__container {
+  .welcome__container { 
+    background: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,6 +141,7 @@ display: block; /* Ensure links are block elements */
     padding: 30px;
  }
  .wel__heading {
+  background: fixed;
    font-size: 100px;
    margin-bottom: 24px;
    width: 100%;
@@ -159,6 +162,7 @@ display: block; /* Ensure links are block elements */
  }
  
  .wel__description {
+  background: fixed;
    font-size: 50px;
    font-family: Bebas Neue;
    cursor:default;
