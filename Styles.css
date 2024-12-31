@@ -1,458 +1,454 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
-    scroll-behavior: smooth;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  scroll-behavior: smooth;
+  /* background-color: rgb(7, 29, 47); */
+  /* cursor: url(Images/cursor.png), auto; */
+  /* overflow: hidden; */
+}
+/* navigation bar */
+.navbar {
+  background-color: rgb(7, 29, 47);
+  
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 998;
+}
 
-  /* Index  */
-  .mainIndexPage {
-    background-color: rgb(7, 29, 47);
-  }
-  /* navigation bar */
-  .navbar {
-    background: none scroll;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 998;
-  }
-  
-  .navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    /* margin: 0 auto; */
-    /* padding: 0 50px; */
-  }
-  
-  .navbar__container a{
-    font-family: Tiny5;
-    font-size:medium;
-    background-color:rgb(34,139,34);
-  }
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  /* margin: 0 auto; */
+  /* padding: 0 50px; */
+}
 
-  #navbar__logo {
-    background-color:rgb(34,139,34);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    font: italic bold;
-  }
-  
-  .navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-  }
-  
-  .navbar__item {
-    height: 80px;
-    transition: all 0.3s ease;
-    
-  }
+.navbar__container a{
+  font-family: Tiny5;
+  font-size:medium;
+  background-color:rgb(34,139,34);
+}
 
-  .navbar__links {
-    text-decoration: none;
-    width: 125px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .8s ease;
-    padding: 16px;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    font-size: xx-large;
-  }
-  .navbar__item :hover {
-    color: #2c5364;
-  } 
-  #menuicon{
-    display: none;
-  }
-  .navbar__menumobile {
-    display: flex;
-    background-color: black;
-    position: absolute;
-    top: -150px; 
-    right: 0;  
-    transition: .8s;
-    padding: 50px;
-    border-radius: 50px;
-    color: rgb(34,139,34);
+#navbar__logo {
+  background-color:rgb(34,139,34);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font: italic bold;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.navbar__item {
+  height: 80px;
+  transition: all 0.3s ease;
+  
+}
+
+.navbar__links {
+  text-decoration: none;
+  width: 125px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .8s ease;
+  padding: 16px;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: xx-large;
+}
+.navbar__item :hover {
+  color: #2c5364;
+} 
+#menuicon{
+  display: none;
+}
+.navbar__menumobile {
+  display: flex;
+  background-color: black;
+  position: absolute;
+  top: -150px; 
+  right: 0;  
+  transition: .8s;
+  padding: 50px;
+  border-radius: 50px;
+  color: rgb(34,139,34);
 }
 .navbar__menumobile a{
 display: block; /* Ensure links are block elements */
-    text-decoration: none;
-    color: #228b22; /* Set link color */
-    padding: 15px;
-    width: 100%; /* Make links take full width */
-    text-align: center; /* Center text */
-    background-color: #E9E4F0; /* Match background */
-    font-size: 1rem; /* Increase font size */
-    transition:  0.3s ease; /* Smooth hover transition */
+  text-decoration: none;
+  color: #228b22; /* Set link color */
+  padding: 15px;
+  width: 100%; /* Make links take full width */
+  text-align: center; /* Center text */
+  background-color: #E9E4F0; /* Match background */
+  font-size: 1rem; /* Increase font size */
+  transition:  0.3s ease; /* Smooth hover transition */
 }
 
-  /* welcome section */
+/* welcome section */
 
-  .welcome {
-    background: #0f0c29;   
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
-    padding: 100px; 
-    background: url(Images/long-exposure-7169151_1280.jpg) fixed center ;
-    width: 100%;
-    height: 100%;
-    
-  }
-  .welcome__container { 
-    background: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 90%;
-    text-align: center;
-    padding: 30px;
- }
- .wel__heading {
-  background: fixed;
-   font-size: 100px;
-   margin-bottom: 24px;
-   width: 100%;
-   height: 100%;
-   background: #667db6;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   font-family: Playwrite Es;
-   font-style: italic;
-    background-size: 100%;
-   -webkit-background-clip: text;
-   -moz-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -moz-text-fill-color: transparent;
-   cursor:default;
-   justify-content: center;
-   align-items: center;
- }
- 
- .wel__description {
-  background: fixed;
-   font-size: 50px;
-   font-family: Bebas Neue;
-   cursor:default;
-   background: #D3CCE3;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to top, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   -webkit-background-clip: text;
-   -moz-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -moz-text-fill-color: transparent;
-   justify-content: center;
-   align-items: center;
+.welcome {
+  background: #0f0c29;   
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+  padding: 100px; 
+  background: url(Images/long-exposure-7169151_1280.jpg)fixed center ;
+  /* background-repeat: no-repeat;
+  background-position:center; */
+  
+}
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+.wel__heading {
+ font-size: 100px;
+ margin-bottom: 24px;
+ width: 100%;
+ height: 100%;
+ background: #667db6;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ font-family: Playwrite Es;
+ font-style: italic;
+  background-size: 100%;
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-text-fill-color: transparent;
+ cursor:default;
+ justify-content: center;
+ align-items: center;
+}
 
- }
- 
+.wel__description {
+ font-size: 50px;
+ font-family: Bebas Neue;
+ cursor:default;
+ background: #D3CCE3;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to top, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to top, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-text-fill-color: transparent;
+ justify-content: center;
+ align-items: center;
 
- /* introduction section */
+}
 
- .about{
-  color:  rgb(34,139,34);
- }
- .introduction {
-    background-color:  #31572cff;
-    padding: 50px 50px;
-    background-color: rgb(7, 29, 47);
-  }
-  .introduction__container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
-  .introduction__text {
-    background-color: rgb(227, 249, 194);
-    border-radius: 10px;
-    padding: 20px;
-    color:black;
-    opacity: 0.1;
-    transition: 2s;
-    font-family: Merienda;
-    font: bold italic;
-    line-height: 40px;
-  }
-  .introduction__text p{
-    padding: 20px;
-    color:black;
-    transition: 2.8s;
-    font-family: Merienda;
-    font: bold italic;
-    font-size: 10px;
-    line-height: 40px;
-    
-  }
 
-  .introduction__image img{
-    border-radius: 10px;
-  }
+/* introduction section */
 
-  .introduction__text:hover  {
-    color:black;
-    opacity: 1;
-  }
-  .introduction__text p:hover  {
-    color:black;
-    opacity: 1; 
-    font-size: 15px;
-  }
+.about{
+color:  rgb(34,139,34);
+}
+.introduction {
+  background-color:  #31572cff;
+  padding: 50px 50px;
+  background-color: rgb(7, 29, 47);
+}
+.introduction__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.introduction__text {
+  background-color: rgb(227, 249, 194);
+  border-radius: 10px;
+  padding: 20px;
+  color:black;
+  opacity: 0.1;
+  transition: 2s;
+  font-family: Merienda;
+  font: bold italic;
+  line-height: 40px;
+}
+.introduction__text p{
+  padding: 20px;
+  color:black;
+  transition: 2.8s;
+  font-family: Merienda;
+  font: bold italic;
+  font-size: 10px;
+  line-height: 40px;
+  
+}
 
-  /* EC's section */
-  .main__container{
-    background-color: rgb(7, 29, 47);
-    color:#fff;
-    text-align: center;
-    
-  }
+.introduction__image img{
+  border-radius: 10px;
+}
 
-  .school__clubs{
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto; 
-  }
-  .school__clubs img{
-    margin: 25px;
-    transition: .8s;
-    border-radius: 100px; 
-    box-shadow: 10px 10px 5px black;
-  }
-  .volunteering{
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  #friscologo, #scilogo, #codelogo, #betterlogo, #complogo{
-    margin: 25px;
-    transition: .8s;
-    border-radius: 100px;
-    box-shadow: 10px 10px 5px black;
-  }
-  .button2{
-    position: relative;
-    transition: .8s;
-  }
-  #nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
-    display: none;
-    font-size: large;
-    text-align: center;
-    justify-content: center;
-  }
+.introduction__text:hover  {
+  color:black;
+  opacity: 1;
+}
+.introduction__text p:hover  {
+  color:black;
+  opacity: 1; 
+  font-size: 15px;
+}
 
-  #compdescription{
-    color: white;
-  }
-  #x-button, #x-buttonvol, #x-buttoncs {
-    display: flex;
-    position: relative;
-    left: 30px;
-    top: 100px;
-    transition: 2s;
-    padding: 20px;
-  }
+/* EC's section */
+.main__container{
+  background-color: rgb(7, 29, 47);
+  color:#fff;
+  text-align: center;
+  
+}
 
-  /* projects page */
-  .main__containerp {
-    background-color: rgb(7, 29, 47);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow-y: hidden; /* Allow vertical scrolling if needed */
-    overflow-x: hidden;
+.school__clubs{
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto; 
+}
+.school__clubs img{
+  margin: 25px;
+  transition: .8s;
+  border-radius: 100px; 
+  box-shadow: 10px 10px 5px black;
+}
+.volunteering{
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#friscologo, #scilogo, #codelogo, #betterlogo, #complogo{
+  margin: 25px;
+  transition: .8s;
+  border-radius: 100px;
+  box-shadow: 10px 10px 5px black;
+}
+.button2{
+  position: relative;
+  transition: .8s;
+}
+#nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
+  display: none;
+  font-size: large;
+  text-align: center;
+  justify-content: center;
+}
+
+#compdescription{
+  color: white;
+}
+#x-button, #x-buttonvol, #x-buttoncs {
+  display: flex;
+  position: relative;
+  left: 30px;
+  top: 100px;
+  transition: 2s;
+  padding: 20px;
+}
+
+/* projects page */
+.main__containerp {
+  background-color: rgb(7, 29, 47);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: hidden; /* Allow vertical scrolling if needed */
+  overflow-x: hidden;
 }
 
 #projectimage  {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    max-height: 350px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  max-height: 350px;
 }
 
 #description {
-    background-color: #0082c8;
-    border-radius: 10px;
-    padding: 20px;
-    color: #fff;
-    max-width: 800px;
-   
-   
+  background-color: #0082c8;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  max-width: 800px;
+ 
+ 
 }
 
 #back, #forward {
-    cursor: pointer;
-    width: 100px;
-    height: auto;
-    
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  
 }
 
 #back {
-    position: relative;
-    bottom: 300px;
-    right: 20%;
+  position: relative;
+  bottom: 300px;
+  right: 20%;
 }
 
 #forward {
-  position: relative;
-  bottom: 400px;
-  left: 20%;
+position: relative;
+bottom: 400px;
+left: 20%;
 }
 
 @media all and (max-width: 500px) {
-  * {
-    overflow-x: hidden;
-  }
-  
-  .wel__heading {
-    font-size: 200%;
-  }
+* {
+  overflow-x: hidden;
+}
 
-  .wel__description {
-    font-size: 150%;
-  }
+.wel__heading {
+  font-size: 200%;
+}
 
-  #navbar__logo {
-    font-size: 100%;
-    padding-left: 10px;
-  }
+.wel__description {
+  font-size: 150%;
+}
 
-  .navbar__links {
-    display: none;
-  }
+#navbar__logo {
+  font-size: 100%;
+  padding-left: 10px;
+}
 
-  #menuicon {
-    display: flex;
-    position: absolute;
-    left: 80%;
-    bottom: 20%;
-    padding-top: 5px;
-  }
+.navbar__links {
+  display: none;
+}
 
-  .introduction__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 200px;
-    padding-right: 200px;
-  }
+#menuicon {
+  display: flex;
+  position: absolute;
+  left: 80%;
+  bottom: 20%;
+  padding-top: 5px;
+}
 
-  .introduction {
-    padding-bottom: 50%;
-    display: table-row;
-  }
+.introduction__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+  padding-right: 200px;
+}
 
-  #imgme {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 20px; /* Adds space between the image and the text */
-  }
+.introduction {
+  padding-bottom: 50%;
+  display: table-row;
+}
 
-  .introduction__text {
-    position: static;
-    padding: 30px; /* Add padding for better appearance */
-    padding-bottom: 100px;
-    opacity: 1;
-    max-width: 400px;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Center the text */
-  }
+#imgme {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px; /* Adds space between the image and the text */
+}
 
-  .introduction__text p {
-    font-size: 14px;
-    line-height: 20px;
-    opacity: 1;
-    align-items: center;
-    justify-content: center;
-  }
-  .school__clubs{
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto; 
-  }
-  .volunteering{
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto;
-  }
-  #friscologo, #scilogo, #codelogo, #betterlogo, #complogo, .school__clubs img{
-    width: 100px;
-    height: 100px;
-  }
-  .main__container{
-    padding-bottom: 500px;
-  }
-  #nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
-    font-size: small;
-  }
-  #projectimage{
-    width: 200px;
-    height: 200px;
-  }
-  .main__containerp{
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  #description {
-    max-width: 1000px;
-  }
-  #back{
-    width: 90px;
-    height: 90px;
-    right: 50%;
-  }
-  #forward{
-    width: 90px;
-    height: 90px;
-    left: 65%;
-   
-  }
+.introduction__text {
+  position: static;
+  padding: 30px; /* Add padding for better appearance */
+  padding-bottom: 100px;
+  opacity: 1;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center the text */
+}
+
+.introduction__text p {
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+}
+.school__clubs{
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto; 
+}
+.volunteering{
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+#friscologo, #scilogo, #codelogo, #betterlogo, #complogo, .school__clubs img{
+  width: 100px;
+  height: 100px;
+}
+.main__container{
+  padding-bottom: 500px;
+}
+#nhsdescription, #edsdescription, #theaterdescription, #friscodescription, #scitechdescription, #codedescription, #betterdescription, #compdescription{
+  font-size: small;
+}
+#projectimage{
+  width: 200px;
+  height: 200px;
+}
+.main__containerp{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#description {
+  max-width: 1000px;
+}
+#back{
+  width: 90px;
+  height: 90px;
+  right: 50%;
+}
+#forward{
+  width: 90px;
+  height: 90px;
+  left: 65%;
+ 
+}
 
 
 }
@@ -462,11 +458,10 @@ display: block; /* Ensure links are block elements */
 
 
 
-  
-  
 
 
- 
 
-  
-  
+
+
+
+
