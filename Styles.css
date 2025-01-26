@@ -2,16 +2,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: 'Georgia', serif;
   scroll-behavior: smooth;
+ 
   /* background-color: rgb(7, 29, 47); */
   /* cursor: url(Images/cursor.png), auto; */
   /* overflow: hidden; */
 }
 /* navigation bar */
 .navbar {
-  background-color: rgb(255, 244, 116);
-  
+  background-color: black; /* Set the background color */
+  border-radius: 10px; /* Rounded corners */
+  /* margin-top: 20px; Space from the top of the page */
+  /* padding: 10px; Optional: Add some padding */
+  padding-top: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
   height: 50px;
   display: flex;
   justify-content: center;
@@ -20,12 +25,16 @@
   position: sticky;
   top: 0;
   z-index: 998;
+  color: white; /* Set text color to white */
 } 
-.navbar {
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px; /* Optional: Add some padding */
-  background-color: rgb(255, 244, 116);/* Optional: Add a background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+
+.navbar a {
+  color: white; /* Set link color to white */
+  text-decoration: none; /* Optional: Remove underline from links */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 .navbar__container {
@@ -40,7 +49,7 @@
 }
 
 .navbar__container a{
-  font-family: Tiny5;
+  font-family: 'Kumbh Sans', sans-serif;
   font-size:medium;
   background-color:rgb(34,139,34);
 }
@@ -75,7 +84,7 @@
 .navbar__item {
  font-size: 40;
   transition: all 0.3s ease;
-  
+  color: white;
 }
 
 .navbar__links {
@@ -90,6 +99,7 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-size: xx-large;
+  color: white;
 }
 .navbar__links :hover {
   color: #2c5364;
@@ -131,6 +141,9 @@ display: block; /* Ensure links are block elements */
   /* background-repeat: no-repeat;
   background-position:center; */
   
+}
+.mainbody {
+  background-color: rgb(7, 29, 47);
 }
 .welcome__container {
   display: flex;
@@ -457,16 +470,3 @@ left: 20%;
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
