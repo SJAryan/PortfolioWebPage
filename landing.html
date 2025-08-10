@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Sanoj Raj cursor</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="icon" type="image/jpg" href="Images/favconlogo.jpg">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">
+                <!-- Placeholder for ASR logo -->
+                <span class="asr-logo">ASR</span>
+            </div>
+            <ul class="navbar-links">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="landing-card">
+        <h1 class="name">ARYAN SANOJ RAJ</h1>
+        <p class="title">Software & AI Engineer</p>
+        <p class="location">Dallas, TX</p>
+        <div class="social-icons">
+            <a href="#" class="icon github" title="GitHub">
+                <img src="Images/github-mark.png" alt="GitHub" class="icon-img" />
+            </a>
+            <a href="https://www.linkedin.com/feed/" class="icon linkedin" title="LinkedIn">
+                <img src="Images/LI-In-Bug.png" alt="LinkedIn" class="icon-img" />
+            </a>
+            <a href="#" class="icon resume" title="Resume">
+                <img src="Images/contact_page_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="Resume" class="icon-img" />
+            </a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section fullpage-section" id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="Images/Aryan-pic.jpg" alt="Aryan Sanoj Raj" class="about-img" />
+            <div class="about-text">
+                <p>Hi, I'm Aryan Sanoj Raj. I'm a passionate Software & AI Engineer based in Dallas, TX. I love building things that make a difference and am always eager to learn new technologies. Welcome to my portfolio!</p>
+            </div>
+            <!-- Timeline moved here, to the right of about-text -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2021 - Present</h3>
+                        <p>High School Student at [Your School Name]</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2020 - 2021</h3>
+                        <p>Internship at [Company Name]</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2018 - 2020</h3>
+                        <p>Middle School at [School Name]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section fullpage-section" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-row">
+            <div class="project-tile">
+                <img src="Images/landscape2.jpg" alt="Project 1" class="project-img" />
+                <div class="project-desc">Project 1 Description</div>
+            </div>
+            <div class="project-tile">
+                <img src="Images/landscape3.webp" alt="Project 2" class="project-img" />
+                <div class="project-desc">Project 2 Description</div>
+            </div>
+            <div class="project-tile">
+                <img src="Images/matrix-1735640_1280.jpg" alt="Project 3" class="project-img" />
+                <div class="project-desc">Project 3 Description</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section fullpage-section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-row">
+            <div class="skill-tile">
+                <img src="Images/Untitled.png" alt="HTML" class="skill-img" />
+                <div class="skill-name">HTML</div>
+            </div>
+            <div class="skill-tile">
+                <img src="Images/edslogo.jpg" alt="CSS" class="skill-img" />
+                <div class="skill-name">CSS</div>
+            </div>
+            <div class="skill-tile">
+                <img src="Images/codeninjas.png" alt="JavaScript" class="skill-img" />
+                <div class="skill-name">JavaScript</div>
+            </div>
+            <div class="skill-tile">
+                <img src="Images/scitech_logo.png" alt="GCP" class="skill-img" />
+                <div class="skill-name">GCP</div>
+            </div>
+        </div>
+    </section>
+<script>
+// Navbar scroll effect: add .navbar-scrolled when not at top
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const landingCard = document.querySelector('.landing-card');
+    if (!navbar || !landingCard) return;
+    const landingBottom = landingCard.getBoundingClientRect().bottom;
+    if (landingBottom <= 0) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+</script>
+</body>
+</html> 
