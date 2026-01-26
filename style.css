@@ -34,7 +34,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1; /* Behind everything */
+    z-index: -1;
     background-color: var(--bg-color);
 }
 
@@ -151,39 +151,92 @@ h1, h2, h3 { font-family: var(--font-head); text-transform: uppercase; letter-sp
     transform: translateY(-5px);
     border-color: var(--accent-cyan);
 }
+.dark-bg { background-color: rgba(0,0,0,0.4); }
 
-/* --- About --- */
+/* --- About (Placeholder Image) --- */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.about-img { width: 100%; border-radius: 10px; filter: grayscale(100%); transition: filter 0.5s; }
-.about-img:hover { filter: grayscale(0%); }
+.about-img-wrapper { position: relative; display: flex; justify-content: center; }
+
+/* Futuristic Placeholder Box */
+.profile-placeholder {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at center, rgba(0, 243, 255, 0.1), transparent);
+    border: 2px solid var(--glass-border);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+.initials {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px var(--accent-cyan);
+    z-index: 2;
+}
+/* Scanning Animation */
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-cyan);
+    top: 0;
+    left: 0;
+    animation: scan 3s linear infinite;
+    opacity: 0.5;
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+@keyframes scan {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+.img-border {
+    position: absolute; top: 20px; left: 20px; width: 300px; height: 300px;
+    border: 2px solid var(--accent-cyan); border-radius: 20px; z-index: -1;
+    transform: translate(15px, 15px);
+}
+
 .stats-row { display: flex; gap: 30px; margin-top: 30px; }
 .stat-item h3 { font-size: 2rem; color: var(--accent-purple); }
 
-/* --- Experience (Timeline Style) --- */
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* --- Certifications --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
-.timeline-item {
-    border-left: 3px solid var(--accent-green);
-    position: relative;
+.card-header-icon {
+    margin-bottom: 15px;
 }
-.timeline-item .date {
-    font-size: 0.8rem;
-    color: var(--accent-green);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 5px;
+.icon-badge {
+    background: var(--accent-cyan);
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: var(--font-head);
+    font-size: 0.9rem;
 }
+.cert-issuer {
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* --- Experience (Timeline) --- */
+.timeline { display: flex; flex-direction: column; gap: 20px; }
+.timeline-item { border-left: 3px solid var(--accent-green); position: relative; }
+.timeline-item .date { font-size: 0.8rem; color: var(--accent-green); text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
 .timeline-item h4 { color: var(--text-secondary); font-weight: 300; margin-bottom: 10px; }
 
 /* --- Projects --- */
-.featured-project {
-    margin-bottom: 40px;
-    border-top: 2px solid var(--accent-purple);
-}
+.featured-project { margin-bottom: 40px; border-top: 2px solid var(--accent-purple); }
 .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
 .badge { background: rgba(189, 0, 255, 0.2); color: var(--accent-purple); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; margin-right: 10px; }
 .project-tech { color: var(--accent-cyan); font-family: monospace; font-size: 0.9rem; margin-bottom: 15px; }
@@ -208,8 +261,9 @@ footer { padding: 50px 20px; text-align: center; border-top: 1px solid var(--gla
 @media (max-width: 768px) {
     .hero-content h1 { font-size: 2.5rem; }
     .about-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; } /* Simplified for this snippet */
+    .nav-links { display: none; }
     .timeline-item { padding: 20px; }
+    .profile-placeholder, .img-border { width: 100%; max-width: 300px; }
 }
 
 @keyframes glow { from { text-shadow: 0 0 10px rgba(0,243,255,0.2); } to { text-shadow: 0 0 20px rgba(0,243,255,0.6); } }
