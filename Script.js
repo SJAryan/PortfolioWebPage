@@ -1,6 +1,97 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // --- Custom Cursor Logic ---
+    // --- 1. Particles.js Configuration ---
+    // This looks for the div with id="particles-js"
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#00f3ff" // Cyan color particles
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": {
+                    "enable": true,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.1, // Very subtle lines
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2, // Slow, ambient movement
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab" // Particles connect to cursor
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 140,
+                    "line_linked": {
+                        "opacity": 0.5
+                    }
+                },
+                "push": {
+                    "particles_nb": 4
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+    // --- 2. Custom Cursor Logic ---
     const cursorDot = document.querySelector("[data-cursor-dot]");
     const cursorOutline = document.querySelector("[data-cursor-outline]");
     
@@ -12,21 +103,21 @@ document.addEventListener("DOMContentLoaded", function() {
         cursorDot.style.left = `${posX}px`;
         cursorDot.style.top = `${posY}px`;
 
-        // Outline follows with delay (handled by CSS transition, just update position)
+        // Outline follows with delay
         cursorOutline.animate({
             left: `${posX}px`,
             top: `${posY}px`
         }, { duration: 500, fill: "forwards" });
     });
 
-    // Add 'hovering' class to body when hovering over links/buttons
-    const interactiveElements = document.querySelectorAll("a, button, .card");
+    // Add 'hovering' class for interactive elements
+    const interactiveElements = document.querySelectorAll("a, button, .glass, .project-card");
     interactiveElements.forEach(el => {
         el.addEventListener("mouseenter", () => document.body.classList.add("hovering"));
         el.addEventListener("mouseleave", () => document.body.classList.remove("hovering"));
     });
 
-    // --- Smooth Scrolling for Anchor Links ---
+    // --- 3. Smooth Scrolling ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -35,46 +126,4 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-
-    // --- Intersection Observer for Fade-in Animations ---
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: Stop observing once visible
-                // observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Add simple fade-in CSS class dynamically
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .section, .card, .project-card { 
-            opacity: 0; 
-            transform: translateY(30px); 
-            transition: all 0.8s ease-out; 
-        }
-        .visible { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Target elements to animate
-    document.querySelectorAll('.section, .card, .project-card, .about-text').forEach(el => {
-        observer.observe(el);
-    });
-
-    // --- Glitch Text Effect (Simple Randomizer) ---
-    const glitchText = document.querySelector('.glitch');
-    if(glitchText) {
-        let originalText = glitchText.getAttribute('data-text');
-        // You can add complex glitch logic here, for now CSS animation handles the glow
-    }
 });
