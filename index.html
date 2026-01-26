@@ -3,70 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan </title>
-    <link rel="stylesheet" href="Styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aryan Sanoj Raj | Future Engineer</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda:wght@300..900&family=Playwrite+ES:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Tiny5&display=swap" rel="stylesheet">
-<link rel="icon" type="image/jpg" href="Images/favconlogo.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="indexScript.js"> 
-    </script>
 
-<!-- welcome section -->
-<div class="welcome" id="home">
-    <div class="welcome__container">
-        <h1 class="wel__heading">Aryan Sanoj Raj</h1>
-        <p class="wel__description">Aspiring Software & AI Engineer</p>
-       
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
 
-    </div>
-</div>
-
-<div class="mainbody">
-<!-- navigation bar -->
-<nav class="navbar">
-    <div class="navbar__container">
-        <a href="#home" id="navbar__logo">Aryan Sanoj Raj</a>
-        <img src="Images/menuicon.png" alt="Menu Icon" id="menuicon" width="60px" height="50px">
-        <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="#home" class="navbar__links" id="home-page">Home</a>
-            </li>
-            <li class="navbar__item">
-                <a href="EC's.html" class="navbar__links" id="about-page">Extracurriculars</a>
-            </li>
-            <li class="navbar__item">
-                <a href="Projects.html" class="navbar__links" id="Projects-page">Projects</a>
-            </li>
-            <li class="navbar__item">
-                <a href="ism.html" class="navbar__links" id="Projects-page">ISM</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="navbar__menumobile" id="menuliksm">
-      <a href="#home" class="navbar__links" id="home-page">Home</a>
-      <a href="EC's.html" class="navbar__links" id="about-page">ECS</a>
-      <a href="Projects.html" class="navbar__links" id="Projects-page">Projects</a>
-</div>
-<!-- Introduction_section -->
-    <div class="introduction" id="intro">
-        <h1 class="about"> About Me:</h1>
-        <br>
-        <br>
-        <div class="introduction__container">
-            <div class="introduction__image"> 
-                <img id="imgme" src="Images/Aryan-pic.jpg" alt="this is how I look like" height="400" width="400" "> 
-            </div>
-            <div class="introduction__text" id="abouttext">
-                <p> Hi, I am Aryan. I was born in India in 2007 and moved to the USA in 4th grade, a cultural transition that has greatly influenced my perspective and ambitions. As a high school student passionate about computer science, I believe in using technology to help others and contribute to my community. Through volunteering and engaging in community activities, I've seen how small acts can transform lives. I am dedicated to leveraging my skills to develop innovative solutions that create a safer and better future for all.
-                </p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">ARYAN<span>.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#ism" class="nav-link">ISM</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-    </div>
-</div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Aryan Sanoj Raj">Aryan Sanoj Raj</h1>
+            <p class="subtitle">Aspiring <span class="highlight">Software & AI Engineer</span></p>
+            <p class="hero-desc">Building the future through code, community, and innovation.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#about" class="btn secondary-btn">More About Me</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About <span class="accent">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-img-wrapper">
+                    <img src="Images/Aryan-pic.jpg" alt="Aryan Sanoj Raj" class="about-img">
+                    <div class="img-border"></div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Born in India and raised in the USA, my journey is defined by adaptation and ambition. 
+                        As a high school student passionate about <strong>Computer Science</strong>, I believe in leveraging technology 
+                        to solve real-world problems.
+                    </p>
+                    <p>
+                        From volunteering at libraries to developing AI models, I am dedicated to creating 
+                        innovative solutions that build a safer, better future for all.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <h3>3+</h3>
+                            <p>Years Coding</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>5+</h3>
+                            <p>Major Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>Volunteer Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Experience & <span class="accent">Clubs</span></h2>
+            
+            <div class="category-header">School Leadership</div>
+            <div class="card-grid">
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/NHS-logo.PNG" alt="NHS"></div>
+                    <h3>NHS Officer</h3>
+                    <p>Managing volunteer events and supporting members to build a better community foundation.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/edslogo.jpg" alt="EDS"></div>
+                    <h3>EDS Tech Director</h3>
+                    <p>Leading website and app development for a club dedicated to addressing teenage addiction.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/theaterlogo.jpg" alt="Theater"></div> <h3>Drama Club</h3>
+                    <p>International Thespian Society member. Actor in "Shakespeare in Love" and filmmaker.</p>
+                </div>
+            </div>
+
+            <div class="category-header">Volunteering</div>
+            <div class="card-grid">
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/friscopubliclibary_logo.png" alt="Library"></div>
+                    <h3>VolunTEEN</h3>
+                    <p>Assisted patrons and managed the Mayor's Summer Reading Challenge at Frisco Public Library.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/scitech_logo.png" alt="SciTech"></div>
+                    <h3>Museum Helper</h3>
+                    <p>Teaching kids about STEM and fostering curiosity at the Frisco Science Discovery Center.</p>
+                </div>
+                <div class="card glass">
+                    <div class="card-icon"><img src="Images/codeninjas.png" alt="Code Ninjas"></div>
+                    <h3>Code Sensei</h3>
+                    <p>Teaching ages 7-14 about Roblox dev, 3D printing, and AI with Micro Bit and Scratch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical <span class="accent">Projects</span></h2>
+            
+            <div class="featured-project glass">
+                <div class="featured-content">
+                    <span class="badge">Hackathon</span>
+                    <h3>STEAM Olympic Hackathon</h3>
+                    <p>Creator, Mentor, and Judge. I brainstormed coding challenges and developed solution code for the "For a Better Tomorrow" Hackathon.</p>
+                </div>
+                <div class="featured-img">
+                    <img src="Images/betterTomorrow.jpg" alt="Hackathon"> </div>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="p-img-container">
+                        <img src="Images/Callogo.jpeg" alt="Calculator">
+                        <div class="overlay">
+                            <a href="#" class="btn-sm">View Code</a>
+                        </div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Java Calculator</h3>
+                        <p>Basic arithmetic operations developed using Java and stdDraw library.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="p-img-container">
+                        <img src="Images/lifelogo.jpeg" alt="Game of Life">
+                        <div class="overlay">
+                            <a href="#" class="btn-sm">View Code</a>
+                        </div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Game of Life</h3>
+                        <p>John Horton Conway’s Game of Life simulation implemented in Java.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="p-img-container">
+                        <img src="Images/tetrislogo.jpeg" alt="Tetris">
+                        <div class="overlay">
+                            <a href="#" class="btn-sm">View Code</a>
+                        </div>
+                    </div>
+                    <div class="p-info">
+                        <h3>Tetris Clone</h3>
+                        <p>Classic arcade game recreated using Java and the STD Draw library.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ism" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">ISM <span class="accent">Research</span></h2>
+            <div class="ism-container glass">
+                <div class="mentor-section">
+                    <h3>The Mentor</h3>
+                    <img src="Images/mrvijupic.jpeg" alt="Mr. Viju" class="mentor-pic">
+                    <h4>Mr. Viju Kottaparambil</h4>
+                    <p class="role">CEO, Mindmax Software Solutions</p>
+                    <p class="desc">Former VP at Bank of America. Providing expert insights into Generative AI and career development.</p>
+                </div>
+                <div class="project-details">
+                    <h3>The Project: AI Email Assistant</h3>
+                    <p>
+                        I am currently developing an AI model designed to process user emails and generate summaries 
+                        along with actionable to-do lists. This integrates <strong>Natural Language Processing (NLP)</strong> 
+                        and <strong>Machine Learning</strong> to streamline productivity.
+                    </p>
+                    <div class="blog-list">
+                        <h4>Research Logs</h4>
+                        <ul>
+                            <li><a href="#">Blog 1: Initial Research</a></li>
+                            <li><a href="#">Blog 2: Selecting the Model</a></li>
+                            <li><a href="#">Blog 3: Data Processing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Aryan Sanoj Raj. Built with <span class="heart">♥</span> and Code.</p>
+            <div class="socials">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
