@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Add 'hovering' class for interactive elements
-    const interactiveElements = document.querySelectorAll("a, button, .glass, .project-card, .profile-placeholder");
+    const interactiveElements = document.querySelectorAll("a, button, .glass, .project-card, .profile-placeholder, .skill-tag");
     interactiveElements.forEach(el => {
         el.addEventListener("mouseenter", () => document.body.classList.add("hovering"));
         el.addEventListener("mouseleave", () => document.body.classList.remove("hovering"));
